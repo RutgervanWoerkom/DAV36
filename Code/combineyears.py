@@ -5,7 +5,7 @@ clean = open('../Data/clean/combinedyears.csv','w')
 with open('../Data/clean/cleandata2018.csv') as f:
     reader = csv.reader(f)
     for row in reader:
-        if 'STRAATNAAM' in row:
+        if 'JAARTAL' in row:
             clean.write(','.join(row))
             clean.write('\n')
         elif 'AMSTERDAM' in row or 'AMSTERDAM ZUIDOOST' in row:

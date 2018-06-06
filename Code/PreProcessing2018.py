@@ -2,7 +2,7 @@ import csv
 
 clean = open('../Data/clean/cleandata2018.csv','w')
 
-with open("../Data/data2018.csv") as f:
+with open("../Data/fix2018.csv") as f:
     reader = csv.reader(f)
     for row in reader:
         if 'STRAATNAAM' in row:
