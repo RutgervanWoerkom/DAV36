@@ -10,7 +10,7 @@ with open("../Data/fix2014.csv") as f:
             clean.write(','.join(row))
             clean.write('\n')            
         elif 'AMSTERDAM' in row or 'AMSTERDAM ZUIDOOST' in row:
-            clean.write('2014,')
+            clean.write('"2014",')
             clean.write(','.join(row))
             clean.write('\n')
 
