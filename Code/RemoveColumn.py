@@ -5,4 +5,4 @@ df.drop(['NETBEHEERDER', 'NETGEBIED', 'LANDCODE', 'WOONPLAATS', 'VERBRUIKSSEGMEN
 
 print(df)
 
-df.to_csv('../Data/clean/CombinedRemoved.csv')
+df.to_csv('../Data/clean/CombinedRemoved.csv',index = False)
