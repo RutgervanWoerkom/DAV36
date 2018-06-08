@@ -8,8 +8,6 @@ def to_bin():
     labels_2 = [0,1,2,3,4,5,6,7,8,9]
     data['%Leveringsrichting'.format()] = pd.cut(data['%Leveringsrichting'.format()], bins=bins, labels=labels)
     data['%Fysieke status'.format()] = pd.cut(data['%Fysieke status'.format()], bins=bins_2,labels=labels_2)
-    data['%Slimme Meter'.format()] = pd.cut(data['%Slimme Meter'.format()], bins=bins_2,labels=labels_2)
-    data['%SJV laag tarief'.format()] = pd.cut(data['%SJV laag tarief'.format()], bins=bins_3,labels=labels)
     data.to_csv('../Data/clean/bins.csv',index = False)
 
 to_bin()
