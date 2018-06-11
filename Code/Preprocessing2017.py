@@ -7,10 +7,9 @@ with open("../Data/fix2017.csv") as f:
     for row in reader:
         if 'STRAATNAAM' in row:
             clean.write('JAARTAL,')
-            clean.write(','.join(row))
-            clean.write('\n')            
+            clean.write(','.join(row))            
         elif 'AMSTERDAM' in row or 'AMSTERDAM ZUIDOOST' in row:
             clean.write('"2017",')
             clean.write(','.join(row))
-            clean.write('\n')
+        clean.write('\n')
 
