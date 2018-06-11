@@ -10,7 +10,6 @@ def to_bin():
     data['%Fysieke status'.format()] = pd.cut(data['%Fysieke status'.format()], bins=bins_2,labels=labels_2)
     data['%Slimme Meter'.format()] = pd.cut(data['%Slimme Meter'.format()], bins=bins_2,labels=labels_2)
     data['%SJV laag tarief'.format()] = pd.cut(data['%SJV laag tarief'.format()], bins=bins_3,labels=labels)
-    data.drop(['Gemiddeld aantal telwielen', '%Defintieve aansl (NRM)'], axis = 1, inplace = True)
     data.to_csv('../Data/clean/finalclean3.0.csv',index = False)
 
 to_bin()
