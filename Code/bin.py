@@ -11,8 +11,6 @@ def to_bin():
     data['%Slimme Meter'.format()] = pd.cut(data['%Slimme Meter'.format()], bins=bins_2,labels=labels_2)
     data['%SJV laag tarief'.format()] = pd.cut(data['%SJV laag tarief'.format()], bins=bins_3,labels=labels)
     data.to_csv('../Data/clean/finalclean3.0.csv',index = False)
-    print(data.isnull().sum())
-
 
 to_bin()
 
