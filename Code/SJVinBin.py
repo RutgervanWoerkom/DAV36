@@ -35,6 +35,8 @@ for i in range(len(data)):
         CovA.append(data.loc[i,'SJV'])
         CovB.append(data.loc[i,'%Leveringsrichting'])
 
-print(data.groupby('SJV').count())
-
 print(numpy.cov(CovA,CovB)[0][1])
+A = -(numpy.std(CovA) * numpy.std(CovB))
+B = numpy.std(CovA) * numpy.std(CovB)
+print(A, B)
+print(numpy.cov(CovA,CovB)[0][1] / B)
