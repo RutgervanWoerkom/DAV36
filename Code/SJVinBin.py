@@ -40,3 +40,5 @@ A = -(numpy.std(CovA) * numpy.std(CovB))
 B = numpy.std(CovA) * numpy.std(CovB)
 print(A, B)
 print(numpy.cov(CovA,CovB)[0][1] / B)
+
+print(CovB)
