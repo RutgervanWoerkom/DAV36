@@ -5,12 +5,18 @@ body {
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
+    background-image: url("Wallpapers/wallpaper2.jpg");
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .header {
     padding: 30px;
     text-align: center;
     background: white;
+    opacity: 0.85;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.185);
 }
 .header h1 {
     font-size: 50px;
@@ -18,14 +24,23 @@ body {
 .leftcolumn {   
     float: left;
     width: 75%;
+    opacity: 0.85;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.185);
 }
 .rightcolumn {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
+    background-color: transparent;
     padding-left: 20px;
+    opacity: 0.85;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.185);
 }
 .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.vraag1 {
     background-color: white;
     padding: 20px;
     margin-top: 20px;
@@ -52,4 +67,16 @@ p {
 }
 li {
     font-size: 17px;
+}
+h2 {
+    font-size: 30px;
+}
+.flashcard {
+    background-color: rgba(79, 139, 196, 0.788);
+    color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.308);
+    border-radius: 12px;
 }

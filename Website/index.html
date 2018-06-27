@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="DAV.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = 0;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+}
+</script>
+<meta charset="utf-8">
+</head>
+<body>
+
+<div class="header">
+  <h1>Power consumption Amsterdam</h1>
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Welkom bij het meest uitvoerige Liander onderzoek in Amsterdam ooit!</h2>
+
+      <p>
+        Liander, het bedrijf dat ons energie levert. Het bedrijf waarvan wij de data hebben bestudeerd,
+        om eens te kijken hoe het zit met het verbruik van elektriciteit en gas in Amsterdam. Informatie of gebeurtenissen omtrent het verbruik van energie vinden
+        we allemaal belangrijk, het heeft niet alleen direct effect op onze portemonnee, maar ook op de wereld waarin we leven. Hoe zit het bijvoorbeeld met
+        de totale hoeveelheid energie die we per jaar gebruiken? Neemt deze hoeveelheid af, wordt de stad groener, of neemt deze alleen maar toe?</br>
+        </br>
+        Met de data over Amsterdam van 2014 tot en met 2018, beschikbaar op de website van Liander, hebben
+        wij onderzoek gedaan om antwoord te krijgen op verschillende onderzoeksvragen. Namelijk:
+
+        <ul>
+          <li type="square">Zijn er evenementen als de opkomst van Bitcoin minen, of buitengewoon koude winters, detecteerbaar in de dataset?</li>
+          <li type="square">Bestaan er verschillen tussen het verbruik van verschillende buurten in Amsterdam en zijn deze consistent door de jaren heen?</li>
+          <li type="square">Welk effect heeft de slimme meter op het verbruik per jaar van een postcode?</li>
+          <li type="square">Bestaat er een verband tussen het verbruik in elektriciteit en de leverings richting van een postcode?</li>
+        </ul>
+
+        Deze webpagina bevat een overzicht van alle onderzoeksvragen met daarop een antwoord, gevonden uit de database.
+
+      </p>
+      
+    </div>
+    <div class="card">
+      <h2>Fun Facts</h2>
+      <div> 
+        <p class="flashcard">Wist je dat het gemiddelde verbruik per postcode in Amsterdam de laatste vier jaar afgenomen is? Amsterdam wordt groener!</p>
+      </div>
+      <div> 
+        <p class="flashcard">De dataset van Liander bevat postcodes die niet bestaan in Amsterdam... Waar zijn ze op uit?</p>
+      </div>
+      <div> 
+        <p class="flashcard">Er zijn meer elektriciteitsaansluitingen dan gasaansluitingen! Het begin van een gasvrij Amsterdam is aangebroken.</p>
+      </div>
+    </div>
+    <div class="vraag1" id="vraag1">
+      <h3>Zijn er evenementen als de opkomst van Bitcoin minen, of buitengewoon koude winters, detecteerbaar in de dataset?</h3>
+
+      <p>
+        HIER EEN STUK TEKST EN GRAFIEK
+
+      </p>
+      
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Groepje 36</h2>
+      <p>Jannes, Rutger, Jeroen, Magda en Emir</p>
+
+      <div class="first"><button type="button" onclick="smoothScroll(document.getElementById('vraag1'))">Onderzoeksvraag 1</button></div>
+      
+
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
