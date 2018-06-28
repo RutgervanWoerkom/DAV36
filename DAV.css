@@ -4,13 +4,18 @@
 body {
     font-family: Arial;
     padding: 10px;
+<<<<<<< Updated upstream
     background: #f1f1f1;
     background-attachment: fixed;
+=======
+    background: #EAE6E5;    
+>>>>>>> Stashed changes
 }
 .header {
     padding: 30px;
     text-align: center;
-    background: white;
+    background: #12130F;
+    color: #EAE6E5;
 }
 .header h1 {
     font-size: 50px;
@@ -22,18 +27,28 @@ body {
 .rightcolumn {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
+    background-color: #EAE6E5;
     padding-left: 20px;
 }
 .card {
-    background-color: white;
+    background-color: #12130F;
     padding: 20px;
     margin-top: 20px;
+    color: #EAE6E5;
 }
 .row:after {
     content: "";
     display: table;
     clear: both;
+}
+.container {
+    width: 100vw;
+    margin: 0;
+}
+.row-full {
+    width: 100vw;
+    display: block;
+    background-color: red;
 }
 @media screen and (max-width: 800px) {
     .leftcolumn, .rightcolumn {   
